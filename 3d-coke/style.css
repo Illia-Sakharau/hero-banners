@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+:root {
+  --ind: calc(1vw + 1vh);
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.layers {
+  perspective: 800px;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #341414 url('img/layer-13.png')  0 0/100% auto no-repeat;
+}
+
+.layers__container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  transform-style: preserve-3d;
+  transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+  will-change: transform;
+  transition: transform 2s cubic-bezier(0.05, 0.5, 0, 1);
+}
+.layers__container_stat {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.layers__item {
+  position: absolute;
+  inset: -10vh -10vw;
+  background-size: cover;
+  background-position: center;
+  /* filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.25)); */
+}
+
+.layers-1 {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  transform: translateY(60px) translateZ(150px) scale(0.85);
+  /* filter: blur(5px); */
+}
+.layers-2 {
+  transform: translateZ(200px) scale(0.5);
+}
+.layers-3 {
+  transform: translateZ(90px) scale(1);
+}
+.layers-4 {
+  inset: inherit;
+  width: 100vw;
+  max-width: 1440px;
+  padding: 0 16px calc(var(--ind) * 10) 0;
+  color: #fff;
+}
+.text-container {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: calc(var(--ind) * 1.5);
+  padding: 32px;
+  max-width: calc(100vw - 16px);
+  background: rgba(205, 20, 24, 0.20);
+  backdrop-filter: blur(8px);
+}
+.text-container > span {
+  font-size: calc(var(--ind) * 1.5);
+  font-weight: 600;
+  letter-spacing: calc(var(--ind) * 0.09);
+  text-transform: uppercase;
+}
+.text-container > h2 {
+  font-size: calc(var(--ind) * 4);
+  font-weight: 900;
+  line-height: 100%;
+  letter-spacing: calc(var(--ind) * 0.15);
+  text-transform: uppercase;
+}
+.layers-5 {
+  inset: 0;
+}
+.layers-6 {
+  inset: inherit;
+  transform: rotate(calc(20deg + var(--scroll)));
+  background-size: contain;
+  background-repeat: no-repeat;
+  right: 15vw;
+  height: 65vh;
+  width: 30vh;
+}
+.layers-7 {
+  transform: translateZ(-30px) scale(1.05);
+}
+.layers-8 {
+  transform: translateZ(-60px) scale(1.1);
+}
+.layers-9 {
+  transform: translateZ(-90px) scale(1.15);
+}
+.layers-10 {
+  transform: translateZ(-120px) scale(1.5);
+}
+.layers-11 {
+  transform: translateY(-60px) translateZ(-150px) scale(1.25);
+  /* filter: blur(1.5px); */
+}
+.layers-12 {
+  transform: translateZ(-400px) scale(1.5);
+  /* filter: blur(3px); */
+}
